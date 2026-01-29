@@ -1,0 +1,139 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  width: 800px;
+  max-width: 90vw;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  height: 480px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+  color: #333;
+  line-height: 1;
+  z-index: 10;
+  padding: 3px;
+}
+
+.modalBody {
+  display: flex;
+  width: 100%;
+}
+
+.contentLeft {
+  flex: 1;
+  background-color: #f7f7f7;
+  padding: 35px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contentRight {
+  flex: 1.5;
+  padding: 25px 30px;
+}
+
+.modalHeading {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.modalList {
+  list-style: none;
+}
+
+.modalList li {
+  padding: 8px 0;
+  padding-left: 25px;
+  position: relative;
+  color: #555;
+  font-size: 0.95em;
+}
+
+.rightHeading {
+  font-size: 1.4em;
+  color: #333;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.signupForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formLabel {
+  font-size: 0.85em;
+  color: #666;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.formInput {
+  padding: 7px 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 0.9em;
+  transition: border-color 0.2s;
+}
+
+.formInput:focus {
+  border-color: var(--primary-blue);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+.submitButton {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 9px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  font-weight: 400;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background-color 0.2s;
+}
+
+.submitButton:hover {
+  background-color: var(--secondary-blue);
+}
+
+.twoColumnGroup {
+  display: flex;
+  gap: 15px;
+}
+
+.twoColumnGroup .formGroup {
+  flex: 1;
+}

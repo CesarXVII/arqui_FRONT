@@ -1,0 +1,247 @@
+.profileWrapper {
+  margin-left: 120px;
+  padding: 24px 40px;
+  width: calc(100% - 120px);
+}
+
+.profileContent {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  min-height: calc(100vh - 150px);
+}
+
+.userSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0 40px 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.largeAvatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  font-size: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+}
+
+.userName {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 8px 0;
+}
+
+.userPlan {
+  font-size: 14px;
+  color: #666;
+  background: #f0f0f0;
+  padding: 4px 16px;
+  border-radius: 16px;
+}
+
+.infoSection {
+  padding: 32px 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.infoLabel {
+  font-size: 13px;
+  color: #999;
+  font-weight: 500;
+}
+
+.infoValue {
+  font-size: 15px;
+  color: #333;
+  font-weight: 500;
+}
+
+.cardsSection {
+  padding: 32px 0;
+}
+
+.cardsSectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.addCardButton {
+  background-color: #00b8e6 !important;
+  border-color: #00b8e6 !important;
+  border-radius: 6px;
+  height: 36px;
+}
+
+.addCardButton:hover {
+  background-color: #00a3d1 !important;
+  border-color: #00a3d1 !important;
+}
+
+.loadingCards {
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+}
+
+.emptyCards {
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+}
+
+.emptyIcon {
+  font-size: 64px;
+  color: #ddd;
+  margin-bottom: 16px;
+}
+
+.emptyCards p {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.cardItem {
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 24px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.cardItem:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.cardItem:hover .deleteButton {
+  opacity: 1;
+}
+
+.cardItem :global(.ant-card-body) {
+  padding: 0;
+}
+
+.deleteButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: white !important;
+  background: rgba(255, 255, 255, 0.2) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.deleteButton:hover {
+  background: rgba(255, 77, 79, 0.95) !important;
+  transform: scale(1.15);
+  opacity: 1 !important;
+}
+
+.deleteButton:active {
+  transform: scale(1.05);
+}
+
+.deleteButton:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.cardIcon {
+  font-size: 32px;
+}
+
+.cardBrand {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.cardNumber {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+  font-family: 'Courier New', monospace;
+}
+
+.cardOwner {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+  opacity: 0.95;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.cardExpiry {
+  font-weight: 500;
+}
+
+.cardType {
+  text-transform: capitalize;
+  font-weight: 500;
+}

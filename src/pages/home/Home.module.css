@@ -1,0 +1,183 @@
+:root {
+  --primary-blue: #007bff;
+  --secondary-blue: #0056b3;
+  --dark-text: #333;
+  --light-gray: #f5f5f5;
+  --link-blue: #007bff;
+}
+
+.homeContainer {
+  font-family: Arial, sans-serif;
+  color: var(--dark-text);
+  min-height: 100vh;
+}
+
+.navBar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 8px 40px;
+  border-bottom: 1px solid #eee;
+  background-color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 1em;
+  color: #555;
+  margin-right: 100px;
+}
+
+.logoImage {
+  width: 32px;
+  height: auto;
+}
+
+.logoText {
+  font-size: 1em;
+  font-weight: bold;
+  color: #555;
+}
+
+.navLinks {
+  display: flex;
+}
+
+.navLinks a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: var(--dark-text);
+  font-size: 0.9em;
+  transition: color 0.3s ease;
+  text-shadow: none;
+}
+
+.navLinks a:hover {
+  color: #000;
+  text-shadow: 0 0 0.8px #000;
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.languageSelect {
+  margin-right: 15px;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+.loginLink {
+  margin-right: 26px;
+  text-decoration: none;
+  color: var(--dark-text);
+  font-size: 0.9em;
+  transition: color 0.3s ease;
+}
+
+.loginLink:hover {
+  color: #000;
+  text-shadow: 0 0 0.8px #000;
+}
+
+.heroSection {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 50px;
+  gap: 50px;
+}
+
+.contentColumn {
+  flex: 1;
+  max-width: 50%;
+}
+
+.tagline {
+  color: var(--primary-blue);
+  font-weight: bold;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.mainHeading {
+  font-size: 2.5em;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.mainText,
+.secondaryText {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.secondaryText {
+  font-size: 0.9em;
+}
+
+.imageColumn {
+  flex: 1;
+  position: relative;
+  min-height: 400px;
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.ctaButtons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.ctaButtonPrimary,
+.ctaButtonSecondary,
+.ctaButtonPrimaryOrange {
+  padding: 9px 20px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  color: white;
+}
+
+.ctaButtonPrimary {
+  background-color: var(--primary-blue);
+  font-size: 0.8em;
+}
+
+.ctaButtonPrimary:hover {
+  background-color: var(--secondary-blue);
+}
+
+.ctaButtonPrimaryOrange {
+  background-color: var(--primary-blue);
+  color: white;
+}
+
+.ctaButtonPrimaryOrange:hover {
+  background-color: var(--secondary-blue);
+}
+
+.ctaButtonSecondary {
+  background-color: white;
+  color: var(--primary-blue);
+  border: 1px solid var(--primary-blue);
+}
+
+.ctaButtonSecondary:hover {
+  background-color: var(--light-gray);
+}

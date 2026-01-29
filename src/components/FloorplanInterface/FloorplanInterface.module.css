@@ -1,0 +1,346 @@
+:root {
+  --navbar-color: #FFFFFF;
+  --navbar-icon-color: #666666;
+  --accent-color: #00A6FF;
+  --canvas-bg-color: #F8F8F8;
+  --sider-color: #FFFFFF;
+  --window-bg-color: #FFFFFF;
+  --window-border-color: #CCCCCC;
+  --sider-active-bg: #00A6FF;
+  --sider-active-text: #FFFFFF;
+  --grid-color: rgba(200,200,200,0.3);
+}
+
+.floatingSider {
+  position: absolute;
+  top: 20px;
+  left: 21px;
+  z-index: 100;
+  background: var(--sider-color);
+  padding: 8px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  border: 1px solid #E0E0E0;
+  width: 80px;
+  max-height: calc(100% - 40px);
+  overflow-y: auto;
+}
+
+.siderMenu {
+  background: transparent !important;
+  border: none !important;
+  width: 100% !important;
+}
+
+.siderMenuItem {
+  padding: 12px 0 !important;
+  margin: 6px 0 !important;
+  height: auto !important;
+  line-height: 1 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  border-radius: 10px !important;
+  transition: all 0.25s ease !important;
+  background-color: transparent !important;
+  width: 100% !important;
+}
+
+.siderItemContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+}
+
+.siderItemIcon {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--navbar-icon-color);
+  transition: color 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.siderItemLabel {
+  font-size: 11px;
+  font-weight: bold;
+  color: var(--navbar-icon-color);
+  transition: color 0.25s ease;
+  white-space: nowrap;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.siderMenuItem:hover {
+  background-color: #F5F5F5 !important;
+}
+
+.siderMenuItem:hover .siderItemIcon,
+.siderMenuItem:hover .siderItemLabel {
+  color: var(--accent-color);
+}
+
+.siderMenuItem:global(.ant-menu-item-selected) {
+  background-color: var(--sider-active-bg) !important;
+}
+
+.siderMenuItem:global(.ant-menu-item-selected) .siderItemLabel,
+.siderMenuItem:global(.ant-menu-item-selected) .siderItemIcon {
+  color: var(--sider-active-text) !important;
+}
+
+.siderMenuItem:global(.ant-menu-item-selected)::after {
+  display: none !important;
+}
+
+.sidePanel {
+  position: absolute;
+  top: 20px;
+  left: 112px;
+  z-index: 99;
+  background: #FFFFFF;
+  width: 240px;
+  max-height: calc(100% - 40px);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  border: 1px solid #E0E0E0;
+  overflow: hidden;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.sidePanelHeader {
+  padding: 16px 20px;
+  border-bottom: 1px solid #E0E0E0;
+  background: #FAFAFA;
+}
+
+.sidePanelHeader h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.sidePanelContent {
+  padding: 8px;
+  max-height: calc(100% - 60px);
+  overflow-y: auto;
+}
+
+.sidePanelItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 12px;
+  margin: 4px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #FFFFFF;
+}
+
+.sidePanelItem:hover {
+  background: #F5F5F5;
+}
+
+.sidePanelButton {
+  background: #F0F0F0;
+  border: 1px dashed #CCCCCC;
+  justify-content: center;
+}
+
+.sidePanelButton:hover {
+  background: #E8E8E8;
+  border-color: var(--accent-color);
+}
+
+.sidePanelItemLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sidePanelItemIcon {
+  font-size: 18px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidePanelItemLabel {
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+}
+
+.sidePanelItemArrow {
+  font-size: 12px;
+  color: #999;
+}
+
+.zoomWindow {
+  position: absolute;
+  top: 20px;
+  left: 100px;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  border: 1px solid #E0E0E0;
+  padding: 10px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 100;
+}
+
+.zoomWindowButton {
+  background-color: #E0E0E0 !important;
+  color: var(--navbar-icon-color) !important;
+  border: none !important;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.zoomWindowButton:hover {
+  background-color: #d0d0d0 !important;
+  transform: scale(1.1);
+}
+
+.subPanel {
+  position: absolute;
+  top: 20px;
+  left: 110px;
+  z-index: 99;
+  background: #FFFFFF;
+  width: 240px;
+  max-height: calc(100% - 40px);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  border: 1px solid #E0E0E0;
+  overflow: hidden;
+  animation: slideIn 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.subPanelHeader {
+  padding: 12px 16px;
+  border-bottom: 1px solid #E0E0E0;
+  background: #FAFAFA;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.subPanelHeader h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  flex: 1;
+}
+
+.backButton {
+  padding: 4px 8px !important;
+  height: auto !important;
+  color: #666 !important;
+}
+
+.backButton:hover {
+  color: var(--accent-color) !important;
+  background: #F0F0F0 !important;
+}
+
+.subPanelContent {
+  padding: 12px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.subPanelContent::-webkit-scrollbar {
+  width: 6px;
+}
+
+.subPanelContent::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.subPanelContent::-webkit-scrollbar-thumb {
+  background: #c0c0c0;
+  border-radius: 3px;
+}
+
+.subPanelContent::-webkit-scrollbar-thumb:hover {
+  background: #a0a0a0;
+}
+
+.subPanelContent {
+  scrollbar-width: thin;
+  scrollbar-color: #c0c0c0 #f1f1f1;
+}
+
+.draggableObject {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  border: 2px dashed #D0D0D0;
+  border-radius: 8px;
+  cursor: grab;
+  transition: all 0.2s ease;
+  background: #FAFAFA;
+}
+
+.draggableObject:hover {
+  border-color: var(--accent-color);
+  background: #F0F8FF;
+  transform: scale(1.05);
+}
+
+.draggableObject:active {
+  cursor: grabbing;
+  opacity: 0.7;
+}
+
+.objectPreview {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.objectName {
+  font-size: 11px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}

@@ -1,0 +1,129 @@
+/* Variables de colores */
+:root {
+  --accent-color: #1890ff; /* color azul para los botones */
+}
+
+/* Modal */
+.modal .ant-modal-content {
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+  padding: 0;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Titulo centrado y grande */
+.modalTitle {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 16px 0;
+}
+
+/* Contenido interno */
+.modalContent {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Columnas lado a lado */
+.columns {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.label {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Select e Input */
+.select .ant-select-selector,
+.linkInput .ant-input {
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.select .ant-select-focused .ant-select-selector,
+.linkInput .ant-input:focus {
+  box-shadow: 0 0 0 2px rgba(24,144,255,0.2);
+}
+
+/* Botones con estilo exportButton */
+.buttonGroup {
+  display: flex;
+  gap: 10px;
+}
+
+.buttonGroup .exportButton {
+  flex: 1; /* ocupan todo el ancho entre los dos */
+  font-weight: 600;
+  color: #fff !important;
+  padding: 3px 12px !important;
+  font-size: 13px;
+  height: 35px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+  transition: all 0.2s ease-in-out;
+}
+
+.buttonGroup .exportButton:hover {
+  background-color: var(--accent-color) !important;
+  box-shadow: inset 0 0 0 1000px rgba(255,255,255,0.35);
+}
+
+/* Link generado */
+.generatedLink {
+  margin-top: 20px;
+}
+
+.linkContainer {
+  display: flex;
+}
+
+.linkInput .ant-input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: #fafafa;
+  color: #333;
+}
+
+.copyButton.ant-btn {
+  background-color: #f0f0f0;
+  color: #333;
+  height: 40px;
+  font-weight: 600;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.copyButton.ant-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.linkContainer .ant-space-compact > :first-child .ant-input {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.linkContainer .ant-space-compact > :last-child .ant-btn {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-left: 1px solid #d9d9d9;
+}
+
+.linkContainer .ant-space-compact > .ant-btn {
+  border-radius: 8px;
+}
