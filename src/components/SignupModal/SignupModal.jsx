@@ -2,19 +2,26 @@ import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import styles from './SignupModal.module.css';
 import { registerUser } from '../../services/userService';
+import TermsModal from '../TermsModal/TermsModal';
 
 const SignupModal = ({ onClose, formFields, onSuccess }) => {
   const [formData, setFormData] = useState({});
   const [error, setError] = useState('');
+  const [isTermsModalOpen, setIsTermsModalOpen] = useState(false);
 
   const handleChange = (e) => {
     setError('');
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setError('');
+    setIsTermsModalOpen(true);
+  };
+
+  const handleAcceptTerms = async () => {
+    setIsTermsModalOpen(false);
 
     const toastId = toast.info('Registrando usuario...', {
       position: 'top-right',
@@ -24,7 +31,8 @@ const SignupModal = ({ onClose, formFields, onSuccess }) => {
     });
 
     try {
-      const data = await registerUser(formData);
+      const dataToSubmit = { ...formData, acceptedTerms: true };
+      const data = await registerUser(dataToSubmit);
       // eslint-disable-next-line no-console
       console.log('Registro exitoso:', data);
       toast.update(toastId, {
@@ -132,6 +140,12 @@ const SignupModal = ({ onClose, formFields, onSuccess }) => {
           </div>
         </div>
       </div>
+      {isTermsModalOpen && (
+        <TermsModal
+          onAccept={handleAcceptTerms}
+          onClose={() => setIsTermsModalOpen(false)}
+        />
+      )}
     </div>
   );
 };

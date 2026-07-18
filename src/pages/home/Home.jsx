@@ -57,8 +57,8 @@ const Home = () => {
           </h1>
           <p className={styles.mainText}>
             Tu espacio importa. Planificar y diseñar puede ser un desafío, por eso existe
-            **CasaMind**. Creemos que planificar tu espacio no debería ser difícil, costoso ni
-            exclusivo para profesionales. Debería ser **fácil, accesible, divertido y gratuito**
+            ARQIA. Creemos que planificar tu espacio no debería ser difícil, costoso ni
+            exclusivo para profesionales. Debería ser fácil, accesible, divertido y gratuito
             para todos.
           </p>
           <p className={styles.secondaryText}>
@@ -69,7 +69,7 @@ const Home = () => {
               className={styles.ctaButtonPrimaryOrange}
               onClick={openSignupModal}
             >
-              ¡Crea una cuenta GRATUITA!
+              ¡Crea una cuenta!
             </button>
           </div>
         </div>
@@ -168,12 +168,77 @@ const Home = () => {
             className={styles.ctaButtonPrimary}
             onClick={openSignupModal}
           >
-            Cuenta gratuita
+            Registrate
           </button>
         </div>
       </header>
 
       {renderMainContent()}
+
+      <footer className={styles.footerSection}>
+        <div className={styles.footerContainer}>
+          
+          {/* Columna 1: Contacto */}
+          <div className={styles.footerColumn}>
+            <h3 className={styles.footerHeading}>Contacto</h3>
+            <ul className={styles.footerList}>
+              <li>
+                <span className={styles.icon}>📞</span>
+                <strong>63456850</strong>
+              </li>
+              <li>
+                <span className={styles.icon}>✉️</span>
+                <a href="mailto:soporte@plan2d.com" className={styles.footerLink}>soporte@plan2d.com</a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Columna 2: Ubicación */}
+          <div className={styles.footerColumn}>
+            <h3 className={styles.footerHeading}>Ubicación</h3>
+            <ul className={styles.footerList}>
+              <li>
+                <span className={styles.icon}>📍</span>
+                <span>Av. Principal Empresarial #150,<br/>Edificio Corporativo, Piso 4.</span>
+              </li>
+              <li>
+                <span className={styles.icon}>🏙️</span>
+                <span>Santa Cruz, Bolivia</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Columna 3: Horarios */}
+          <div className={styles.footerColumn}>
+            <h3 className={styles.footerHeading}>Horario de Atención</h3>
+            <ul className={styles.footerList}>
+              <li>
+                <span className={styles.icon}>🕒</span>
+                <span><strong>Lunes a Viernes:</strong><br/>8:30 AM - 18:30 PM</span>
+              </li>
+              <li>
+                <span className={styles.icon}>🕒</span>
+                <span><strong>Sábados:</strong><br/>9:00 AM - 13:00 PM</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Columna 4: Redes Sociales */}
+          <div className={styles.footerColumn}>
+            <h3 className={styles.footerHeading}>Conéctate</h3>
+            <div className={styles.socialLinks}>
+              <a href="#" className={styles.socialIcon}>Facebook</a>
+              <a href="#" className={styles.socialIcon}>LinkedIn</a>
+              <a href="#" className={styles.socialIcon}>Instagram</a>
+            </div>
+          </div>
+          
+        </div>
+        
+        <div className={styles.footerBottom}>
+          <p>&copy; {new Date().getFullYear()} ARQIA. Todos los derechos reservados.</p>
+        </div>
+      </footer>
 
       {isSignupModalOpen && (
         <SignupModal
