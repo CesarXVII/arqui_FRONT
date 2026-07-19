@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import styles from './LoginPago.module.css';
+import styles from './loginPago.module.css';
 import userService from '../../services/userService';
 
 const LoginPago = ({ onClose, selectedPlan }) => {
